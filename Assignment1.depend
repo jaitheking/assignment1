@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1416319129 source:/home/jaitheking/Desktop/Programming/Assignment1/admin.cpp
+
+1416319086 source:/home/jaitheking/Desktop/Programming/Assignment1/audio_cd.cpp
+
+1416503482 source:/home/jaitheking/Desktop/Programming/Assignment1/book.cpp
+	"book.hpp"
+
+1416319144 source:/home/jaitheking/Desktop/Programming/Assignment1/customer.cpp
+
+1416504229 source:/home/jaitheking/Desktop/Programming/Assignment1/main.cpp
+	"store_item.hpp"
+	"book.hpp"
+
+1416504053 /home/jaitheking/Desktop/Programming/Assignment1/store_item.hpp
+	<string>
+	<iostream>
+
+1416504053 source:/home/jaitheking/Desktop/Programming/Assignment1/store_item.cpp
+	"store_item.hpp"
+
+1416501903 source:/home/jaitheking/Desktop/Programming/Assignment1/store_user.cpp
+
+1416319094 source:/home/jaitheking/Desktop/Programming/Assignment1/video_game.cpp
+
+1416504350 /home/jaitheking/Desktop/Programming/Assignment1/book.hpp
+	"store_item.hpp"
+	<iostream>
+	<string>
+
