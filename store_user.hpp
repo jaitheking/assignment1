@@ -1,24 +1,21 @@
+#ifndef STORE_USER_HPP
+#define STORE_USER_HPP
+#include <iostream>
+#include <string>
+
+using namespace std;
 class store_user {
         string name;
         string password;
-    class admin:public store_user{
         public:
-            add_item();
-            remove_item();
-            edit_item();
-            display_item();
+        void login();
 
-    }
-    class customer:public store_user{
-            string cust_name;
-            string cust_address;
-            string contact_no;
-        public:
-            make_order();
-            display_order();
-
-    }
+        };
 
 
 
-}
+
+
+
+
+#endif // STORE_USER_HPP

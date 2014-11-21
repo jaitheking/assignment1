@@ -8,7 +8,7 @@ class book : public store_item    {
                 int isbn;
 
                 public:
-                book(int item_ID,string item_title,double item_price,int item_quantity, string author, string publisher, int isbn);
+                book(int item_ID=0,string item_title="Empty", double item_price=0.0,int item_quantity=0, string author="Empty", string publisher="Empty", int isbn=0);
                 void display();
                 string getAuthor();
                 string getPublisher();

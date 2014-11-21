@@ -2,6 +2,8 @@
 #define STORE_ITEM_HPP
 #include <string>
 #include <iostream>
+#include <vector>
+
 
 using namespace std;
 class store_item {
@@ -19,10 +21,11 @@ class store_item {
         string getTitle();
         double getPrice();
         int getQuantity();
-        void setID(int item_ID);
-        void setTitle(string item_title);
-        void setPrice(double item_price);
-        void setQuantity(int item_quantity);
+        void setID();
+        void setTitle();
+        void setPrice();
+        void setQuantity();
+
 
 };
 

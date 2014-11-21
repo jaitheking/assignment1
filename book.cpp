@@ -27,4 +27,25 @@
             cout<<"\nAuthor:"<<getAuthor();
             cout<<"\nPublisher:"<<getPublisher();
             cout<<"\nISBN:"<<getISBN();
-}
+    }
+
+    void book::setAuthor(){
+            cout<<"Please enter the name of the Author:";
+            cin.ignore();
+            getline(std::cin,author);
+            this->author=author;
+
+    }
+    void book::setPublisher(){
+            cout<<"Please enter the name of the Publisher:";
+            getline(std::cin,publisher);
+            this->publisher=publisher;
+
+    }
+
+    void book::setISBN(){
+            cout<<"Please enter the ISBN:";
+            cin>>isbn;
+            this->isbn=isbn;
+
+    }

@@ -31,11 +31,25 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Assignment1.cbp" />
+		<Unit filename="Assignment1.depend" />
+		<Unit filename="Assignment1.layout" />
+		<Unit filename="README.md" />
+		<Unit filename="admin.cpp" />
+		<Unit filename="admin.hpp" />
+		<Unit filename="audio_cd.cpp" />
+		<Unit filename="audio_cd.hpp" />
+		<Unit filename="book.cpp" />
+		<Unit filename="book.hpp" />
+		<Unit filename="customer.cpp" />
+		<Unit filename="customer.hpp" />
 		<Unit filename="main.cpp" />
 		<Unit filename="store_item.cpp" />
 		<Unit filename="store_item.hpp" />
 		<Unit filename="store_user.cpp" />
 		<Unit filename="store_user.hpp" />
+		<Unit filename="video_game.cpp" />
+		<Unit filename="video_game.hpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />
