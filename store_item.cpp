@@ -27,6 +27,25 @@
             return item_quantity;
     }
 
+    void store_item::set_item_detail(){
+            cout<<"Enter ID:";
+            cin >>item_ID;
+            this->item_ID=item_ID;
+
+            cout<<"Enter Title:"<<endl;
+            cin.get();
+            getline(cin,item_title,'\n');
+            this->item_title=item_title;
+
+            cout<<"Enter Price:";
+            cin >>item_price;
+            this->item_price=item_price;
+
+            cout<<"Enter Quantity:";
+            cin >>item_quantity;
+            this->item_quantity=item_quantity;
+    }
+
     void store_item::setID(){
             cout<<"Enter ID:";
             cin >>item_ID;
@@ -34,10 +53,11 @@
     }
 
     void store_item::setTitle(){
-            cout<<"Enter Title:";
-            cin.ignore();
-            getline(std::cin,item_title);
+            cout<<"Enter Title:"<<endl;
+            cin.get();
+            getline(cin,item_title,'\n');
             //cin>>item_title;
+
             this->item_title=item_title;
     }
 

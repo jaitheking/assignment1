@@ -1,35 +1,39 @@
 # depslib dependency file v1.0
-1416319129 source:/home/jaitheking/Desktop/Programming/Assignment1/admin.cpp
+1416743527 source:/home/jaitheking/Desktop/Programming/Assignment1/admin.cpp
+	"admin.hpp"
+	"book.hpp"
 
 1416319086 source:/home/jaitheking/Desktop/Programming/Assignment1/audio_cd.cpp
 
-1416545130 source:/home/jaitheking/Desktop/Programming/Assignment1/book.cpp
+1416743033 source:/home/jaitheking/Desktop/Programming/Assignment1/book.cpp
 	"book.hpp"
 
 1416566949 source:/home/jaitheking/Desktop/Programming/Assignment1/customer.cpp
 	"customer.hpp"
 
-1416570259 source:/home/jaitheking/Desktop/Programming/Assignment1/main.cpp
+1416743678 source:/home/jaitheking/Desktop/Programming/Assignment1/main.cpp
 	"store_item.hpp"
 	"book.hpp"
 	"store_user.hpp"
 	<vector>
+	"admin.hpp"
 
-1416565333 /home/jaitheking/Desktop/Programming/Assignment1/store_item.hpp
+1416713057 /home/jaitheking/Desktop/Programming/Assignment1/store_item.hpp
 	<string>
 	<iostream>
 	<vector>
 
-1416544875 source:/home/jaitheking/Desktop/Programming/Assignment1/store_item.cpp
+1416713057 source:/home/jaitheking/Desktop/Programming/Assignment1/store_item.cpp
 	"store_item.hpp"
 
-1416549776 source:/home/jaitheking/Desktop/Programming/Assignment1/store_user.cpp
+1416738819 source:/home/jaitheking/Desktop/Programming/Assignment1/store_user.cpp
 	"store_user.hpp"
 	"customer.hpp"
+	"admin.hpp"
 
 1416319094 source:/home/jaitheking/Desktop/Programming/Assignment1/video_game.cpp
 
-1416541907 /home/jaitheking/Desktop/Programming/Assignment1/book.hpp
+1416742975 /home/jaitheking/Desktop/Programming/Assignment1/book.hpp
 	"store_item.hpp"
 	<iostream>
 	<string>
@@ -40,4 +44,9 @@
 
 1416565816 /home/jaitheking/Desktop/Programming/Assignment1/customer.hpp
 	"store_user.hpp"
+
+1416744332 /home/jaitheking/Desktop/Programming/Assignment1/admin.hpp
+	"store_user.hpp"
+	"book.hpp"
+	<vector>
 

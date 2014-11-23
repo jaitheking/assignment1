@@ -21,6 +21,7 @@ class store_item {
         string getTitle();
         double getPrice();
         int getQuantity();
+        void set_item_detail();
         void setID();
         void setTitle();
         void setPrice();
