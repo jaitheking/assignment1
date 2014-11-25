@@ -1,5 +1,5 @@
 #include "admin.hpp"
-#include "book.hpp"
+
 
             void admin::admin_menu(){
                 BEGIN:cout<<"Welcome to the Admin Menu"<<endl;
@@ -98,53 +98,22 @@
                 }
 
         }
-            void admin::add_book(){
-                                        cout<<"Enter how many books you would like to add:";
-                                        cin>>iter;
-                                        book *b;
+//            void admin::add_book(){
+//                                        cout<<"Enter how many books you would like to add:";
+//                                        cin>>iter;
+//                                        book *b;
+//
+//                                        do {
+//                                            b = new book;
+//                                            b->store_item::set_item_detail();
+//                                            b->book::set_detail();
+//                                            booklist.push_back(*b);
+//                                            cin.get();
+//                                            delete b;
+//                                            iter--;
+//                                        }while(iter>0);
+//            }
 
-                                        do {
-                                            b = new book;
-                                            b->store_item::set_item_detail();
-                                            b->book::set_detail();
-                                            booklist.push_back(*b);
-                                            cin.get();
-                                            delete b;
-                                            iter--;
-                                        }while(iter>0);
-            }
-
-            void admin::add_audio_cd(){
-                                        cout<<"Enter how many books you would like to add:";
-                                        cin>>iter;
-                                        book *b;
-
-                                        do {
-                                            b = new book;
-                                            b->store_item::set_item_detail();
-                                            b->book::set_detail();
-                                            booklist.push_back(*b);
-                                            cin.get();
-                                            delete b;
-                                            iter--;
-                                        }while(iter>0);
-            }
-
-            void admin::add_video_game(){
-                                        cout<<"Enter how many books you would like to add:";
-                                        cin>>iter;
-                                        book *b;
-
-                                        do {
-                                            b = new book;
-                                            b->store_item::set_item_detail();
-                                            b->book::set_detail();
-                                            booklist.push_back(*b);
-                                            cin.get();
-                                            delete b;
-                                            iter--;
-                                        }while(iter>0);
-            }
 
             void admin::remove_book(){
                         int remove_count;
@@ -159,7 +128,13 @@
                         cout<<"Enter the number of the item that you wish to edit";
                         cin>>edit_count;
                         booklist.erase(booklist.begin()+edit_count-1);
-                        booklist.
+                        book *b;
+                        b = new book;
+                        b->store_item::set_item_detail();
+                        b->book::set_item_detail();
+                        booklist.push_back(*b);
+                        cin.get();
+                        delete b;
 
 
 

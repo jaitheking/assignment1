@@ -6,6 +6,7 @@
 
 
 using namespace std;
+
 class store_item {
 
         protected:
@@ -14,14 +15,16 @@ class store_item {
         double item_price;
         int item_quantity;
 
+
         public:
-        void display();
+
+        virtual void display();
         store_item(int item_ID=0,string item_title="Empty", double item_price=0.0,int item_quantity=0);
         int getID();
         string getTitle();
         double getPrice();
         int getQuantity();
-        void set_item_detail();
+        virtual void set_item_detail();
         void setID();
         void setTitle();
         void setPrice();

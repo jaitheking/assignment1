@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1416743527 source:/home/jaitheking/Desktop/Programming/Assignment1/admin.cpp
+1416746348 source:/home/jaitheking/Desktop/Programming/Assignment1/admin.cpp
 	"admin.hpp"
 	"book.hpp"
 
-1416319086 source:/home/jaitheking/Desktop/Programming/Assignment1/audio_cd.cpp
+1416878212 source:/home/jaitheking/Desktop/Programming/Assignment1/audio_cd.cpp
+	"audio_cd.hpp"
 
 1416743033 source:/home/jaitheking/Desktop/Programming/Assignment1/book.cpp
 	"book.hpp"
@@ -11,7 +12,7 @@
 1416566949 source:/home/jaitheking/Desktop/Programming/Assignment1/customer.cpp
 	"customer.hpp"
 
-1416743678 source:/home/jaitheking/Desktop/Programming/Assignment1/main.cpp
+1416746533 source:/home/jaitheking/Desktop/Programming/Assignment1/main.cpp
 	"store_item.hpp"
 	"book.hpp"
 	"store_user.hpp"
@@ -45,8 +46,20 @@
 1416565816 /home/jaitheking/Desktop/Programming/Assignment1/customer.hpp
 	"store_user.hpp"
 
-1416744332 /home/jaitheking/Desktop/Programming/Assignment1/admin.hpp
+1416878439 /home/jaitheking/Desktop/Programming/Assignment1/admin.hpp
 	"store_user.hpp"
 	"book.hpp"
+	"audio_cd.hpp"
+	"video_game.hpp"
 	<vector>
+
+1416878134 /home/jaitheking/Desktop/Programming/Assignment1/audio_cd.hpp
+	"store_item.hpp"
+	<iostream>
+	<string>
+
+1416878473 /home/jaitheking/Desktop/Programming/Assignment1/video_game.hpp
+	"store_item.hpp"
+	<iostream>
+	<string>
 

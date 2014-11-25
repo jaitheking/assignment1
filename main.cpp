@@ -1,40 +1,18 @@
 #include "store_item.hpp"
 #include "book.hpp"
 #include "store_user.hpp"
-#include <vector>
 #include "admin.hpp"
+#include "video_game.hpp"
 int main(){
 
-         admin *a = new admin;
-         a->add_book();
-         a->display_book();
-         a->remove_book();
-         a->display_book();
-        //store_user* user = new store_user;
-        //user->store_user::login();
-        /*cout<<"Please enter a new item"<<endl;
-        store_item* item = new store_item;
-        item->store_item::set_item_detail();
-        item->display();
-        delete item;
-        book *b;
-        vector<book> booklist;
-        for (int n=0;n<2;n++){
-              b = new book;
-            b->store_item::set_item_detail();
-            b->book::set_book_detail();
+            store_item *s[4] = { new store_item, new book, new audio_cd, new video_game };
+            for (int i = 0; i < 4; i++) {
+                s[i]->set_item_detail();
 
+            }
+            for (int i = 0; i < 4; i++) {
+                s[i]->display();
 
-        booklist.push_back(*b);
-        cin.get();
-        delete b;
-        }
-
-        vector<book>::iterator it;
-
-        for (it= booklist.begin();it != booklist.end();++it){
-            it->display();
-
-        }
-        */
+            }
+            delete s[4];
 }
