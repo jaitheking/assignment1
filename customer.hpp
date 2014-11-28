@@ -1,5 +1,8 @@
+#ifndef CUSTOMER_HPP
+#define CUSTOMER_HPP
 #include "store_user.hpp"
-class customer:public store_user{
+
+    class customer : public store_user {
             string cust_name;
             string cust_address;
             string cust_contact_no;
@@ -18,3 +21,4 @@ class customer:public store_user{
             void display_order();
 
     };
+#endif //CUSTOMER_HPP

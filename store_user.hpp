@@ -6,6 +6,7 @@
 #include "audio_cd.hpp"
 #include "video_game.hpp"
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 class store_user {
@@ -19,6 +20,21 @@ class store_user {
             video_game *vg;
 
         public:
+            class SortByCDName {
+                 public:
+                  bool operator() (audio_cd a, audio_cd b)
+                  { return a.getTitle()< b.getTitle(); }
+                };
+            class SortByBookName {
+                 public:
+                  bool operator() (book a, book b)
+                  { return a.getTitle()< b.getTitle(); }
+                };
+            class SortByGameName {
+                 public:
+                  bool operator() (video_game a, video_game b)
+                  { return a.getTitle()< b.getTitle(); }
+                };
             vector<book>* booklist=new vector<book>();
             vector<book>::iterator book_iter;
             vector<audio_cd>* cdlist=new vector<audio_cd>();

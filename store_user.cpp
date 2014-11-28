@@ -3,63 +3,72 @@
 #include "customer.hpp"
 
 
-void store_user::clearScreen() {
+            bool sort_name(audio_cd* a, audio_cd* b)
+            {
+                return a->getTitle()>b->getTitle();
+            }
+
+            void store_user::clearScreen() {
                             #ifdef _WIN32
                             system("cls");
                             #endif
                             #ifdef __linux__
                             cout << "\x1B[H\x1B[2J";
                             #endif
+            }
+
+
+
+
+
+            void store_user::login(){
+                cout<<"Welcome to E-Leisure.com"<<endl;
+                LOGIN:cout<<"Please state if you are an admin or a customer:"<<endl;
+                cout<<"1.Admin"<<endl;
+                cout<<"2.Customer"<<endl;
+                cout<<"Your Input:";
+                cin >>choice;
+                switch (choice){
+                    case '1' :
+                    {
+                            admin *a = new admin;
+                            cout <<"Please enter admin password:";
+                            cin>>ch;
+                            if (ch=="adminpass"){
+                                a->admin::admin_menu();
+                                delete a;
+                                break;
+                            }
+                            else{
+                                cout <<"Try Again. (Exit with Ctrl-C)"<<endl;
+                                goto LOGIN;
+                                break;
+                            }
+                    }
+                    case '2':{
+
+
+                            customer *c = new customer;
+                            c->set_cust_name();
+                            c->display_userdetail();
+                            delete c;
+                            break;
+
+
+                    }
+                    default:
+
+                                cout<<"Please Enter A Valid Choice."<<endl;
+                                cout<<"Press ENTER to continue."<<endl;
+                                cin.get();
+                                goto LOGIN;
                 }
 
-void store_user::login(){
-    cout<<"Welcome to E-Leisure.com"<<endl;
-    LOGIN:cout<<"Please state if you are an admin or a customer:"<<endl;
-    cout<<"1.Admin"<<endl;
-    cout<<"2.Customer"<<endl;
-    cout<<"Your Input:";
-    cin >>choice;
-    switch (choice){
-        case '1' :
-        {
-                admin *a = new admin;
-                cout <<"Please enter admin password:";
-                cin>>ch;
-                if (ch=="adminpass"){
-                    a->admin::admin_menu();
-                    delete a;
-                    break;
-                }
-                else{
-                    cout <<"Try Again. (Exit with Ctrl-C)"<<endl;
-                    goto LOGIN;
-                    break;
-                }
-        }
-        case '2':{
-
-
-                customer *c = new customer;
-                c->set_cust_name();
-                c->display_userdetail();
-                delete c;
-                break;
-
-
-        }
-        default:
-
-                    cout<<"Please Enter A Valid Choice."<<endl;
-                    cout<<"Press ENTER to continue."<<endl;
-                    cin.get();
-                    goto LOGIN;
-    }
 
 
 
 
-
-}
+            }
 
             void store_user::add_audio_cd(){
                                         a = new audio_cd;
@@ -178,6 +187,7 @@ void store_user::login(){
                         cout<<"List is empty."<<endl;
                     }
                     else{
+                        sort(cdlist->begin(), cdlist->end(),SortByCDName());
                         for ( cd_iter = cdlist->begin(); cd_iter != cdlist->end(); ++cd_iter  ) {
 
                                 cout<<"#Item No:"<<list_count<<".";
@@ -197,6 +207,7 @@ void store_user::login(){
                         cout<<"List is empty."<<endl;
                     }
                     else{
+                        sort(booklist->begin(), booklist->end(),SortByBookName());
                         for ( book_iter = booklist->begin(); book_iter != booklist->end(); ++book_iter  ) {
 
                                 cout<<"#Item No:"<<list_count<<".";
@@ -216,6 +227,7 @@ void store_user::login(){
                         cout<<"List is empty."<<endl;
                     }
                     else{
+                        sort(gamelist->begin(), gamelist->end(),SortByGameName());
                         for ( game_iter = gamelist->begin(); game_iter != gamelist->end(); ++game_iter  ) {
 
                                 cout<<"#Item No:"<<list_count<<".";
@@ -236,7 +248,7 @@ void store_user::login(){
                     }
                     else{
 
-
+                        sort(cdlist->begin(), cdlist->end(),SortByName());
                         for ( cd_iter = cdlist->begin(); cd_iter != cdlist->end(); ++cd_iter  ) {
 
                             cout<<"#Item No:"<<list_count<<".";
@@ -250,6 +262,7 @@ void store_user::login(){
                         cout<<"No Book available."<<endl;
                     }
                     else{
+                        sort(booklist->begin(), booklist->end(),SortByBookName());
                         for ( book_iter = booklist->begin(); book_iter != booklist->end(); ++book_iter  ) {
 
                                 cout<<"#Item No:"<<list_count<<".";
@@ -262,6 +275,7 @@ void store_user::login(){
                         cout<<"No Video Game available."<<endl;
                     }
                     else{
+                        sort(gamelist->begin(), gamelist->end(),SortByGameName());
                         for ( game_iter = gamelist->begin(); game_iter != gamelist->end(); ++game_iter  ) {
 
                                 cout<<"#Item No:"<<list_count<<".";

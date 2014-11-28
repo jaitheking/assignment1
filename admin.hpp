@@ -1,3 +1,5 @@
+#ifndef ADMIN_HPP
+#define ADMIN_HPP
 #include "store_user.hpp"
 
 
@@ -21,3 +23,4 @@ class admin:public store_user{
 
 
     };
+#endif //ADMIN_HPP
