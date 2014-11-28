@@ -52,8 +52,8 @@
             cout<<"Please enter the name of the recording company:"<<endl;
             getline(cin,rec_comp,'\n');
             this->rec_comp=rec_comp;
-
-            cout<<"Successfully added Audio CD"<<endl;
+            cin.sync();
+            cout<<"Press ENTER to continue"<<endl;
 
     }
 

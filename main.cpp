@@ -3,16 +3,18 @@
 #include "store_user.hpp"
 #include "admin.hpp"
 #include "video_game.hpp"
+void clearScreen() {
+    #ifdef _WIN32
+        system("cls");
+    #endif
+    #ifdef __linux__
+        cout << "\x1B[H\x1B[2J";
+    #endif
+    }
+
 int main(){
 
-            store_item *s[4] = { new store_item, new book, new audio_cd, new video_game };
-            for (int i = 0; i < 4; i++) {
-                s[i]->set_item_detail();
+            store_user *usr = new store_user;
+            usr->login();
 
-            }
-            for (int i = 0; i < 4; i++) {
-                s[i]->display();
-
-            }
-            delete s[4];
 }

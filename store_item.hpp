@@ -20,6 +20,7 @@ class store_item {
 
         virtual void display();
         store_item(int item_ID=0,string item_title="Empty", double item_price=0.0,int item_quantity=0);
+        ~store_item();
         int getID();
         string getTitle();
         double getPrice();

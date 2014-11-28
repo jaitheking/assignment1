@@ -1,6 +1,10 @@
 #include "store_item.hpp"
 
+    store_item::~store_item(){
 
+
+
+    }
     store_item::store_item(int item_ID,string item_title, double item_price,int item_quantity):item_ID(item_ID),item_title(item_title),item_price(item_price),item_quantity(item_quantity){
 
     }
