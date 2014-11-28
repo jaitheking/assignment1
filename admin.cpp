@@ -3,6 +3,7 @@
 
              void admin::add_item_menu(){
                             clearScreen();
+                            cout<<"+++++++++++++++++++++++++"<<endl;
                             cout<<"1.Add a new Audio CD."<<endl;
                             cout<<"2.Add a new Book."<<endl;
                             cout<<"3.Add a new Video Game."<<endl;
@@ -11,30 +12,29 @@
                              cin>>choice_sub;
                             switch(choice_sub){
                                 case '1':
-                                        i = new audio_cd;
-                                        add_sales_item();
+                                        add_audio_cd();
                                         cout<<"Successfully added new Audio CD."<<endl;
 
                                         cout<<"Returning into Admin Menu..."<<endl;
-                                        delete i;
+
                                         break;
 
                                 case '2':
-                                         i = new book;
-                                        add_sales_item();
+
+                                        add_book();
 
                                         cout<<"Successfully added new Book."<<endl;
                                         cout<<"Returning into Admin Menu..."<<endl;
-                                        delete i;
+
                                         break;
 
 
                                  case '3':
-                                            i = new video_game;
-                                            add_sales_item();
+
+                                            add_video_game();
                                         cout<<"Successfully added new Video Game."<<endl;
                                         cout<<"Returning into Admin Menu..."<<endl;
-                                        delete i;
+
                                         break;
 
 
@@ -107,6 +107,7 @@
                                 add_item_menu();
                                 clearScreen();
                                 goto BEGIN;
+                                break;
                     case '2':
 
                                 remove_item_menu();
@@ -114,35 +115,70 @@
                                 edit_item_menu();
 
 
-                    case '4':       display_list();
+                    case '4':
+                                    clearScreen();
+                                    display_list();
                                     cout<<"Please Press ENTER To Continue."<<endl;
                                     cin.get();
-                                    clearScreen();
+
                                     goto BEGIN;
+                    case '5':
+                                    clearScreen();
+                                    store_user::login();
 
                     default:
-                                    break;
-                                    cout<<"Please enter a valid choice."<<endl;
 
+
+                                    clearScreen();
+                                    cout<<"Please enter a valid choice."<<endl;
                                     goto BEGIN;
+                                    break;
 
 
 
                 }
 
         }
-            void admin::add_sales_item(){
-//
-
+            void admin::add_audio_cd(){
+                                        a = new audio_cd;
                                         cout<<"Enter how many items you would like to add:";
                                         cin>>iter;
-
-
                                         do {
 
-                                            i->set_item_detail();
-                                            itemlist.push_back(*i);
+                                            a->set_item_detail();
+                                            cdlist->push_back(*a);
                                             cin.get();
+
+
+                                            iter--;
+                                        }while(iter>0);
+            }
+
+            void admin::add_book(){
+                                        b = new book;
+                                        cout<<"Enter how many items you would like to add:";
+                                        cin>>iter;
+                                        do {
+
+                                            b->set_item_detail();
+                                            booklist->push_back(*b);
+                                            cin.get();
+
+
+                                            iter--;
+                                        }while(iter>0);
+            }
+
+            void admin::add_video_game(){
+                                        vg= new video_game;
+                                        cout<<"Enter how many items you would like to add:";
+                                        cin>>iter;
+                                        do {
+
+                                            vg->set_item_detail();
+                                            gamelist->push_back(*vg);
+                                            cin.get();
+
 
                                             iter--;
                                         }while(iter>0);
@@ -172,15 +208,34 @@
 //
 //            }
             void admin::display_list(){
-
+                    cout<<"===============INVENTORY STARTS==============="<<endl;
                     int list_count=1;
-                    for ( list_iter = itemlist.begin(); list_iter != itemlist.end(); ++list_iter  ) {
+                    for ( cd_iter = cdlist->begin(); cd_iter != cdlist->end(); ++cd_iter  ) {
 
-                            cout<<list_count<<".";
+                            cout<<"#Item No:"<<list_count<<".";
                             list_count++;
-                            list_iter->display();
+                            cd_iter->display();
+                            cout<<endl;
                     }
 
 
+                    for ( book_iter = booklist->begin(); book_iter != booklist->end(); ++book_iter  ) {
+
+                            cout<<"#Item No:"<<list_count<<".";
+                            list_count++;
+                            book_iter->display();
+                            cout<<endl;
+                    }
+
+
+                    for ( game_iter = gamelist->begin(); game_iter != gamelist->end(); ++game_iter  ) {
+
+                            cout<<"#Item No:"<<list_count<<".";
+                            list_count++;
+                            game_iter->display();
+                            cout<<endl;
+                    }
+
+                    cout<<"===============INVENTORY ENDS==============="<<endl;
             }
 
