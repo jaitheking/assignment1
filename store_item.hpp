@@ -18,18 +18,20 @@ class store_item {
 
         public:
         string item_title;
-        virtual void display();
-        store_item(int item_ID=0,string item_title="Empty", double item_price=0.0,int item_quantity=0);
-        ~store_item();
-        int getID();
-        string getTitle();
-        double getPrice();
-        int getQuantity();
-        virtual void set_item_detail();
-        void setID();
-        void setTitle();
-        void setPrice();
-        void setQuantity();
+        void display();
+        void display_order();
+        store_item(int item_ID=0,string item_title="Empty", double item_price=0.0,int item_quantity=0); //Constructor
+        ~store_item(); //Destructor
+        int getID();//Gets ID function
+        string getTitle();//Gets Title function
+        double getPrice();//Gets Price function
+        int getQuantity(); // Gets Quantity function
+        void set_item_detail(); //Allows user to set details for item
+        void setID();//Allows user to set details for item
+        void setTitle();//Allows user to set details for item
+        void setPrice();//Allows user to set details for item
+        void setQuantity();//Allows user to set details for item
+
 
 
 };

@@ -1,21 +1,22 @@
 #include "video_game.hpp"
-
+    //Constructor
     video_game::video_game(int item_ID,string item_title,double item_price, int item_quantity,string company, string platform):store_item(item_ID,item_title,item_price,item_quantity),company(company),platform(platform)
     {
 
     }
-
+    //Fetches Company value
     string video_game::getCompany(){
             return company;
 
 
     }
+    //Fetches Platform value
     string video_game::getPlatform(){
             return platform;
 
     }
 
-
+    //Display Video Game details
     void video_game::display(){
 
             cout<<"\nVideo Game`s Detail:-";
@@ -25,7 +26,7 @@
             cout<<"\nPlatform:"<<getPlatform();
             cout<<endl;
     }
-
+    //Prompts user for video game details
      void video_game::set_item_detail(){
             cout<<"Enter ID:";
             cin >>item_ID;

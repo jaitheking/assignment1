@@ -8,32 +8,34 @@
             string cust_address2;
             string cust_contact_no;
             int select_count,quantity;
-            char choice
+            char confirm;
         public:
             char choice;
             char choice1;
-            string get_cust_name();
-            string get_cust_address1();
-            string get_cust_address2();
-            string get_cust_contact_no();
-            vector<book>* order_booklist=new vector<book>();
+            string get_cust_name(); //Gets Customer Name
+            string get_cust_address1(); //Gets Customer Address Line 1
+            string get_cust_address2(); //Gets Customer Address Line 2
+            string get_cust_contact_no(); //Gets Customer Contact Number
+            //Vector Declaration
+            vector<book> order_booklist;
             vector<book>::iterator orderbook_iter;
-            vector<int> bookquantity;
-            vector<audio_cd>* order_cdlist=new vector<audio_cd>();
+            vector<audio_cd> order_cdlist;
             vector<audio_cd>::iterator ordercd_iter;
             vector<video_game>* order_gamelist=new vector<video_game>();
             vector<video_game>::iterator ordergame_iter;
             vector<int> cd_amount;
             vector<int> book_amount;
             vector<int> game_amount;
-            void set_cust_name();
-            void set_cust_address1();
-            void set_cust_address2();
-            void set_cust_contact_no();
-            void display_userdetail();
-            void cust_menu();
-            void make_purchase();
-            void display_purchase();
+
+            void set_cust_name();  //Asks user for name
+            void set_cust_address1();//Asks user for address line 1
+            void set_cust_address2(); //Asks user for address line 2
+            void set_cust_contact_no(); //Asks user for customer contact no
+            void display_userdetail(); //asks user for customer contact no
+            void cust_menu(); //Customer Interface to make purchase/checkout
+            void make_purchase(); //Allows user to make purchases
+            void display_purchase();//Displays the purchases made by user
+
 
     };
 #endif //CUSTOMER_HPP

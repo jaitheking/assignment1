@@ -1,5 +1,5 @@
 #include "admin.hpp"
-
+            //Displays an admin interface to add,remove,modify and display
              void admin::admin_menu(){
                 clearScreen();
                 BEGIN:cout<<"Welcome to the Admin Menu"<<endl;
@@ -34,8 +34,10 @@
                                     display_list();
                                     cout<<"Please Press ENTER To Continue."<<endl;
                                     cin.get();
+                                    break;
+                                    store_user::login();
 
-                                    goto BEGIN;
+
                     case '5':
                                     clearScreen();
                                     store_user::login();
@@ -45,7 +47,9 @@
 
                                     clearScreen();
                                     cout<<"Please enter a valid choice."<<endl;
-                                    goto BEGIN;
+
+                                    store_user::login();
+
                                     break;
 
 
@@ -54,7 +58,7 @@
 
         }
 
-
+            //Option 1 : Display "Add new items" menu
              void admin::add_item_menu(){
                             clearScreen();
                             cout<<"+++++++++++++++++++++++++"<<endl;
@@ -106,7 +110,7 @@
 
 
              }
-
+            //Option 2: Display "Remove an existing item" menu
             void admin::remove_item_menu(){
                             clearScreen();
                             cout<<"+++++++++++++++++++++++++"<<endl;
@@ -148,6 +152,7 @@
 
 
             }
+            //Option 3 :Displays the "Modify existing item" menu
             void admin::edit_item_menu(){
                             clearScreen();
                             cout<<"+++++++++++++++++++++++++"<<endl;

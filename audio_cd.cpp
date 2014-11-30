@@ -1,21 +1,21 @@
 #include "audio_cd.hpp"
-
+    //Constructor
     audio_cd::audio_cd(int item_ID,string item_title,double item_price, int item_quantity,string artist, string rec_comp):store_item(item_ID,item_title,item_price,item_quantity),artist(artist),rec_comp(rec_comp)
     {
 
     }
-
+    //Fetches Artist value
     string audio_cd::getArtist(){
             return artist;
 
-
+    //Fetches Recording Company value
     }
     string audio_cd::getRec_comp(){
             return rec_comp;
 
     }
 
-
+    //Displays the Audio CD item and its detail
     void audio_cd::display(){
 
             cout<<"\nAudio CD`s Detail:-";
@@ -25,7 +25,7 @@
             cout<<"\nPublisher:"<<getRec_comp();
             cout<<endl;
     }
-
+    //Prompt admin to enter details for the audio cd
       void audio_cd::set_item_detail(){
             cout<<"Enter ID:";
             cin >>item_ID;

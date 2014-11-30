@@ -1,24 +1,26 @@
 #include "book.hpp"
-
+    //Constructor
     book::book(int item_ID,string item_title,double item_price, int item_quantity,string author, string publisher, int isbn):store_item(item_ID,item_title,item_price,item_quantity),author(author),publisher(publisher),isbn(isbn)
     {
 
     }
-
+    //Fetches Author value
     string book::getAuthor(){
             return author;
 
 
     }
+    //Fetches Publisher value
     string book::getPublisher(){
             return publisher;
 
     }
-
+    //Fetches ISBN value
     int book::getISBN(){
             return isbn;
 
     }
+    //Displas Book`s detail
     void book::display(){
 
             cout<<"\nBook`s Detail:-";
@@ -29,7 +31,7 @@
             cout<<"\nISBN:"<<getISBN();
             cout<<endl;
     }
-
+    //Prompts User for Book`s Detail
      void book::set_item_detail(){
             cout<<"Enter ID:";
             cin >>item_ID;

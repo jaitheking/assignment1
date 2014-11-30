@@ -3,11 +3,8 @@
 #include "customer.hpp"
 
 
-            bool sort_name(audio_cd* a, audio_cd* b)
-            {
-                return a->getTitle()>b->getTitle();
-            }
 
+            //Clear screen function
             void store_user::clearScreen() {
                             #ifdef _WIN32
                             system("cls");
@@ -20,39 +17,50 @@
 
 
 
-
+            //Home Interface ; User logon menu
             void store_user::login(){
                 cout<<"Welcome to E-Leisure.com"<<endl;
-                LOGIN:cout<<"Please state if you are an admin or a customer:"<<endl;
+                cout<<"Please state if you are an admin or a customer:"<<endl;
                 cout<<"1.Admin"<<endl;
                 cout<<"2.Customer"<<endl;
                 cout<<"Your Input:";
                 cin >>choice;
+                ch="";
+                admin *adminuser = new admin;
+                customer *c = new customer;
+
+
                 switch (choice){
                     case '1' :
                     {
-                            admin *a = new admin;
+
                             cout <<"Please enter admin password:";
                             cin>>ch;
                             if (ch=="adminpass"){
-                                a->admin::admin_menu();
-                                delete a;
+                                adminuser->admin::admin_menu();
+                                delete adminuser;
                                 break;
                             }
                             else{
+                                clearScreen();
                                 cout <<"Try Again. (Exit with Ctrl-C)"<<endl;
-                                goto LOGIN;
+                                login();
                                 break;
                             }
+                            break;
                     }
                     case '2':{
 
 
-                            customer *c = new customer;
+
                             c->set_cust_name();
-                            c->display_userdetail();
+                            c->set_cust_address1();
+                            c->set_cust_address2();
+                            c->set_cust_contact_no();
+                            c->cust_menu();
+
                             delete c;
-                            break;
+                            break; //Where I stopped
 
 
                     }
@@ -61,7 +69,7 @@
                                 cout<<"Please Enter A Valid Choice."<<endl;
                                 cout<<"Press ENTER to continue."<<endl;
                                 cin.get();
-                                goto LOGIN;
+                                login();
                 }
 
 
@@ -69,7 +77,7 @@
 
 
             }
-
+            //Allow user to add audio_cd
             void store_user::add_audio_cd(){
                                         a = new audio_cd;
                                         cout<<"Enter how many items you would like to add:";
@@ -84,7 +92,7 @@
                                             iter--;
                                         }while(iter>0);
             }
-
+            //Allow user to add book
             void store_user::add_book(){
                                         b = new book;
                                         cout<<"Enter how many items you would like to add:";
@@ -99,7 +107,7 @@
                                             iter--;
                                         }while(iter>0);
             }
-
+            //Allows user to add video_game
             void store_user::add_video_game(){
                                         vg= new video_game;
                                         cout<<"Enter how many items you would like to add:";
@@ -114,7 +122,7 @@
                                             iter--;
                                         }while(iter>0);
             }
-
+            //Allows user to remove audio cd
             void store_user::remove_audio_cd(){
                         int remove_count;
                         display_audio_cd();
@@ -122,7 +130,7 @@
                         cin>>remove_count;
                         cdlist->erase(cdlist->begin()+remove_count-1);
             }
-
+            //Allow user to remove book
             void store_user::remove_book(){
                         int remove_count;
                         display_book();
@@ -130,7 +138,7 @@
                         cin>>remove_count;
                         booklist->erase(booklist->begin()+remove_count-1);
             }
-
+            //Allow user to remove video game
             void store_user::remove_video_game(){
                         int remove_count;
                         display_video_game();
@@ -138,7 +146,7 @@
                         cin>>remove_count;
                         gamelist->erase(gamelist->begin()+remove_count-1);
             }
-
+            //Allow user to modify audio cd
             void store_user::edit_audio_cd(){
                         int edit_count;
                         cout<<"Enter the number of the item that you wish to edit";
@@ -151,7 +159,7 @@
 
 
             }
-
+            //Allow user to modify book
             void store_user::edit_book(){
                         int edit_count;
                         cout<<"Enter the number of the item that you wish to edit";
@@ -164,7 +172,7 @@
 
 
             }
-
+            //Allow user to modify video game
             void store_user::edit_video_game(){
                         int edit_count;
                         cout<<"Enter the number of the item that you wish to edit";
@@ -178,7 +186,7 @@
 
             }
 
-
+            //Display available items to user
             void store_user::display_audio_cd(){
                     cout<<"===============LIST STARTS==============="<<endl;
                     int list_count=1;
@@ -198,7 +206,7 @@
                     }
                     cout<<"===============LIST ENDS==============="<<endl;
             }
-
+            //Display available items to user
             void store_user::display_book(){
                     cout<<"===============LIST STARTS==============="<<endl;
                     int list_count=1;
@@ -218,7 +226,7 @@
                     }
                     cout<<"===============LIST ENDS==============="<<endl;
             }
-
+            //Display available items to user
             void store_user::display_video_game(){
                     cout<<"===============LIST STARTS==============="<<endl;
                     int list_count=1;
@@ -238,17 +246,17 @@
                     }
                     cout<<"===============LIST ENDS==============="<<endl;
             }
-
+            //Display inventory to the user
             void store_user::display_list(){
                     int list_count=1;
                     cout<<"===============INVENTORY STARTS==============="<<endl;
                     if (cdlist->size()==0){
 
-                        cout<<"List is empty."<<endl;
+                        cout<<"No Audio CD available."<<endl;
                     }
                     else{
 
-                        sort(cdlist->begin(), cdlist->end(),SortByName());
+                        sort(cdlist->begin(), cdlist->end(),SortByCDName());
                         for ( cd_iter = cdlist->begin(); cd_iter != cdlist->end(); ++cd_iter  ) {
 
                             cout<<"#Item No:"<<list_count<<".";
