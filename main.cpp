@@ -10,5 +10,6 @@ int main(){
 
             store_user *usr = new store_user;
             usr->login();
+            delete usr;
 
 }

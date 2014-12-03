@@ -1,9 +1,5 @@
 #include "book.hpp"
-    //Constructor
-    book::book(int item_ID,string item_title,double item_price, int item_quantity,string author, string publisher, int isbn):store_item(item_ID,item_title,item_price,item_quantity),author(author),publisher(publisher),isbn(isbn)
-    {
 
-    }
     //Fetches Author value
     string book::getAuthor(){
             return author;
@@ -26,6 +22,8 @@
             cout<<"\nBook`s Detail:-";
             cout<<"\nItem ID:"<<getID();
             cout<<"\nTitle:"<<getTitle();
+            cout<<"\nPrice:RM"<<getPrice();
+            cout<<"\nQuantity:"<<getQuantity();
             cout<<"\nAuthor:"<<getAuthor();
             cout<<"\nPublisher:"<<getPublisher();
             cout<<"\nISBN:"<<getISBN();

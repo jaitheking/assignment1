@@ -27,10 +27,7 @@ class store_item {
         double getPrice();//Gets Price function
         int getQuantity(); // Gets Quantity function
         void set_item_detail(); //Allows user to set details for item
-        void setID();//Allows user to set details for item
-        void setTitle();//Allows user to set details for item
-        void setPrice();//Allows user to set details for item
-        void setQuantity();//Allows user to set details for item
+
 
 
 

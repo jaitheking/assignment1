@@ -30,27 +30,23 @@
 
 
                     case '4':
-                                    clearScreen();
-                                    display_list();
-                                    cout<<"Please Press ENTER To Continue."<<endl;
-                                    cin.get();
-                                    break;
-                                    store_user::login();
+                                clearScreen();
+                                display_list();
+                                goto BEGIN;
+                                break;
 
 
                     case '5':
-                                    clearScreen();
-                                    store_user::login();
+                                clearScreen();
+                                store_user::login();
 
                     default:
 
 
-                                    clearScreen();
-                                    cout<<"Please enter a valid choice."<<endl;
-
-                                    store_user::login();
-
-                                    break;
+                                clearScreen();
+                                cout<<"Please enter a valid choice."<<endl;
+                                admin_menu();
+                                break;
 
 
 

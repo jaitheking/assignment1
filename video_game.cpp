@@ -1,9 +1,5 @@
 #include "video_game.hpp"
-    //Constructor
-    video_game::video_game(int item_ID,string item_title,double item_price, int item_quantity,string company, string platform):store_item(item_ID,item_title,item_price,item_quantity),company(company),platform(platform)
-    {
 
-    }
     //Fetches Company value
     string video_game::getCompany(){
             return company;
@@ -22,6 +18,8 @@
             cout<<"\nVideo Game`s Detail:-";
             cout<<"\nItem ID:"<<getID();
             cout<<"\nTitle:"<<getTitle();
+            cout<<"\nPrice:RM"<<getPrice();
+            cout<<"\nQuantity:"<<getQuantity();
             cout<<"\nCompany:"<<getCompany();
             cout<<"\nPlatform:"<<getPlatform();
             cout<<endl;

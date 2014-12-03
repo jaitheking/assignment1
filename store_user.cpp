@@ -23,6 +23,7 @@
                 cout<<"Please state if you are an admin or a customer:"<<endl;
                 cout<<"1.Admin"<<endl;
                 cout<<"2.Customer"<<endl;
+                cout<<"3.Exit"<<endl;
                 cout<<"Your Input:";
                 cin >>choice;
                 ch="";
@@ -62,6 +63,11 @@
                             delete c;
                             break; //Where I stopped
 
+
+                    }
+
+                    case '3': {
+                                exit(1);
 
                     }
                     default:
@@ -235,6 +241,7 @@
                         cout<<"List is empty."<<endl;
                     }
                     else{
+
                         sort(gamelist->begin(), gamelist->end(),SortByGameName());
                         for ( game_iter = gamelist->begin(); game_iter != gamelist->end(); ++game_iter  ) {
 
@@ -255,7 +262,7 @@
                         cout<<"No Audio CD available."<<endl;
                     }
                     else{
-
+                        cout<<"===============AUDIO CDS==============="<<endl;
                         sort(cdlist->begin(), cdlist->end(),SortByCDName());
                         for ( cd_iter = cdlist->begin(); cd_iter != cdlist->end(); ++cd_iter  ) {
 
@@ -270,6 +277,7 @@
                         cout<<"No Book available."<<endl;
                     }
                     else{
+                        cout<<"===============BOOKS==============="<<endl;
                         sort(booklist->begin(), booklist->end(),SortByBookName());
                         for ( book_iter = booklist->begin(); book_iter != booklist->end(); ++book_iter  ) {
 
@@ -283,6 +291,7 @@
                         cout<<"No Video Game available."<<endl;
                     }
                     else{
+                        cout<<"===============VIDEO GAMES==============="<<endl;
                         sort(gamelist->begin(), gamelist->end(),SortByGameName());
                         for ( game_iter = gamelist->begin(); game_iter != gamelist->end(); ++game_iter  ) {
 

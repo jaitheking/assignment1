@@ -11,7 +11,7 @@ class audio_cd : public store_item    {
 
                 public:
                 //constructor
-                audio_cd(int item_ID=0,string item_title="Empty", double item_price=0.0,int item_quantity=0, string artist="Empty", string rec_comp="Empty");
+
                 void display();//display function
                 string getArtist();//Get Artist value
                 string getRec_comp(); //Get Recording Company Value

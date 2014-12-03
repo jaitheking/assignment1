@@ -15,7 +15,7 @@
             cout<<"\nStore Item`s Detail:-"<<endl;
             cout<<"Item ID:"<<getID();
             cout<<"\nTitle:"<<getTitle();
-            cout<<"\nPrice:"<<getPrice();
+            cout<<"\nPrice:RM"<<getPrice();
             cout<<"\nQuantity:"<<getQuantity()<<endl;
 
     }
